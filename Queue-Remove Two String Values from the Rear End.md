@@ -22,28 +22,27 @@ To write a Python program to:
 
 ##  Program:
 ```
-queue = []
-n = int(input("Enter the number of elements in the queue: "))
+string_list = []
+n = int(input("Enter the number of strings: "))
 for i in range(n):
-    value = int(input(f"Enter element {i + 1}: "))
-    queue.append(value)
-if len(queue) >= 2:
-    queue.pop(0)
-    queue.pop(0)
-elif len(queue) == 1:
-    queue.pop(0)
-    print("Only one element was in the queue, so it's now empty.")
+    val = input(f"Enter string {i + 1}: ")
+    string_list.append(val)
+if len(string_list) >= 2:
+    string_list.pop()
+    string_list.pop()
+elif len(string_list) == 1:
+    string_list.pop()
+    print("Only one string was in the list, so it's now empty.")
 else:
-    print("The queue is empty. Nothing to remove.")
-if queue:
-    queue.sort(reverse=True)
-    print("Remaining elements in descending order:", queue)
+    print("The list is empty. Nothing to remove.")
+if string_list:
+    print("Updated list after removing last two elements:", string_list)
 else:
-    print("No elements remaining in the queue.")
+    print("No elements remaining in the list.")
 ```
 
 ### Output:
-![image](https://github.com/user-attachments/assets/1bddd868-2dae-49c6-8a4b-cc59391e361d)
+![image](https://github.com/user-attachments/assets/74b617a6-37fd-4c6e-979a-475199f4b025)
 
 ## Result:
 ```
